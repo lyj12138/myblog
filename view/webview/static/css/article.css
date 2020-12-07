@@ -14,6 +14,8 @@
 }/*给背景图片设置蒙版*/
 body {
     font: 14px/1.5 微软雅黑, arial, sans-serif;
+    width: 100%;
+    overflow: scroll;
 }
 #header {
     position: fixed;
@@ -53,24 +55,20 @@ a {
 }/*去掉链接下划线*/
 #bg {
     position: relative;
-    background: url("front/images/296494-106.jpg") no-repeat gray;
+    background: url("../images/mybackground.jpg") no-repeat gray;
     background-size: cover;
 }/*设置背景图片*/
 #bg p {
     position: relative;
-    padding: 95px 0 70px;
     color: hsla(0,0%,100%,.9);
     text-align: center;
     font-size: 26px;
     line-height: 2;
     z-index: 2;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
     text-shadow: 0 3px 25px rgba(0,0,0,.3);
     cursor: progress;
-    padding-top: 210px;
-    padding-right: 0px;
-    padding-bottom: 210px;
-    padding-left: 0px;
+    padding: 210px 0px;
 }/*设置文字属性*/
 #bg p i {
     text-decoration: line-through;
@@ -81,7 +79,7 @@ a {
 }/*设置第二行文字属性*/
 #header nav figure
 {
-    background:url("front/images/me.jpg") ;
+    background:url("");
     height: 50px;
     width: 50px;
     background-size:cover ;
@@ -100,16 +98,7 @@ figure {
     -webkit-margin-end: 40px;
     border-radius:100px;
 }
-.article {
-    box-shadow: 5px 5px 25px #dadada;
-}
-.article {
-    position: relative;
-    padding: 0 20px;
-    margin: 40px auto;
-    max-width: 1000px;
-    background: #fff;
-}
+
 #header nav span {
     font-size: 18px;
     margin: 0 10px;
@@ -119,14 +108,7 @@ figure {
 
     vertical-align: middle;
 }
-blockquote {
-    margin-top: 20px;
-    padding: 0 15px;
-    color: #777;
-    border-left: 4px solid #ddd;
-    text-align: left;
-    font-size: 1.3em;
-}
+
 #copyright {
     position: absolute;
     top: 0;
@@ -155,16 +137,6 @@ blockquote {
     border-top: 2px dashed #98b7ff;
     transition: height .1s 1s;
 }
-#pic1 {
-    width: 60%;
-    height: 60%;
-}
-#time1{
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #CCC;
-}
 #hiddenewm p{
     color: #444;
 }
@@ -176,9 +148,85 @@ blockquote {
     left: 25px;
     top: 70px;
 }
-#zhengwen
-{
-    font-size: 1.5em;
-    margin: 1.5em 0;
+#container {
+    position: relative;
+    max-width: 95%;
+    margin: 0 auto;
+}
+.article {
+    box-shadow: 5px 5px 25px #dadada;
+    position: relative;
+    padding: 0 20px;
+    margin: 40px auto;
+    max-width: 950px;
+    background: #fff;
+    text-align: center;
+}
+.article>time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding: 4px 5px 0;
+    color: #999;
+}
+.article h2 {
+    padding-bottom: .5em;
+    font-size: 1.75em;
+    line-height: 1.225;
+}
+.article>h2 {
+    padding: 35px 0 45px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+#container a {
+    color: #333;
+}
+.article>span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    padding: 3px 10px;
+    background: #f1f1f1;
+    font-size: 14px;
+}
+.article section {
     text-align: left;
+    padding: 10px;
+    font-size: 16px;
+}
+.article blockquote {
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd;
+}
+.article footer {
+    padding: 25px 0 20px;
+}
+.article footer a {
+    display: inline-block;
+    color: #18bc9c;
+    cursor: pointer;
+    padding: 4px 20px;
+    border-radius: 5px;
+    transition: all .5s;
+    border: 1px solid #18bc9c;
+}
+#pagebar{
+    text-align: center;
+}
+.comment{
+width:60%;
+position:relative;
+left:20%;
+border:1px ;
+text-align:center;
+margin:9px;
+background-color:#fff;
+border-radius: 5px;
+transition: all .5s;
 }
