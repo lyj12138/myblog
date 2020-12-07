@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php ini_set('display_errors','Off'); session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -350,13 +350,23 @@ $article=mysqli_fetch_assoc($result);
                            <?php
                            }
                            else{
+                               $result3=$conn->query("select * from user where id=".$user_id);
+                               $user=mysqli_fetch_assoc($result3);
+                               if($user['state']=="未激活")
+                               {
                            ?>
-
+                                 alert("提示:请等待审核通过后再进行操作");
+                                 $("#flag").attr("value","false");
+                                 <?php
+                               }
+                               else{
+                                 ?>
                              if($("#content").val()==''){
                                 alert("提示:请输入评论内容");
                                  $("#flag").attr("value","false");
                             }
                         <?php
+                               }
                         }?>
                            
                         })
